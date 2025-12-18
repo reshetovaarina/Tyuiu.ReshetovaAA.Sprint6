@@ -192,7 +192,7 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
             splitContainerMain_RAA.Panel2.BackColor = System.Drawing.SystemColors.ControlDark;
 
             // 
-            // dataGridViewInMatrix_RAA  (БОЛЬШЕ белого)
+            // dataGridViewInMatrix_RAA 
             // 
             dataGridViewInMatrix_RAA.AllowUserToAddRows = false;
             dataGridViewInMatrix_RAA.AllowUserToDeleteRows = false;
@@ -205,7 +205,7 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
             dataGridViewInMatrix_RAA.TabIndex = 0;
 
             // 
-            // dataGridViewOutMatrix_RAA  (БОЛЬШЕ белого)
+            // dataGridViewOutMatrix_RAA  
             // 
             dataGridViewOutMatrix_RAA.AllowUserToAddRows = false;
             dataGridViewOutMatrix_RAA.AllowUserToDeleteRows = false;
