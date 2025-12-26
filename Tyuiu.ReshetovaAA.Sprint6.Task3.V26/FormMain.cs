@@ -1,61 +1,150 @@
 using System;
+using System.IO;
 using System.Windows.Forms;
-using Tyuiu.ReshetovaAA.Sprint6.Task3.V26.Lib;
+using Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Lib;
 
-namespace Tyuiu.ReshetovaAA.Sprint6.Task3.V26
+namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
 {
     public partial class FormMain : Form
     {
         DataService ds = new DataService();
 
-        int[,] matrix =
-        {
-            { 16, 19, 17,  2,  8 },
-            { -17, 8, -17, -8, 1 },
-            { -7, 17, -2, 1, -3 },
-            { -12, 0, -17, 15, 6 },
-            { 17, -6, -17, 18, -19 }
-        };
+        string openFilePath = string.Empty;
+
+        int[,] inputMatrix;
+        int[,] resultMatrix;
 
         public FormMain()
         {
             InitializeComponent();
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
+
+        private static int[,] LoadFromFileData(string filePath)
         {
-            FillGrid(matrix);
+            string fileData = File.ReadAllText(filePath);
+            fileData = fileData.Replace('\n', '\r');
+
+            string[] lines = fileData.Split(
+                new char[] { '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
+
+            int rows = lines.Length;
+            int cols = lines[0].Split(';').Length;
+
+            int[,] arrayValues = new int[rows, cols];
+
+            for (int r = 0; r < rows; r++)
+            {
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < cols; c++)
+                {
+                    arrayValues[r, c] = Convert.ToInt32(line_r[c]);
+                }
+            }
+
+            return arrayValues;
         }
 
-        private void FillGrid(int[,] arr)
+        private static void FillGrid(DataGridView grid, int[,] matrix)
         {
-            int rows = arr.GetUpperBound(0) + 1;
-            int columns = arr.GetUpperBound(1) + 1;
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
 
-            dataGridViewMatrix.ColumnCount = columns;
-            dataGridViewMatrix.RowCount = rows;
+            grid.RowCount = rows;
+            grid.ColumnCount = cols;
 
-            for (int i = 0; i < columns; i++)
-                dataGridViewMatrix.Columns[i].Width = 35;
+            for (int i = 0; i < cols; i++)
+            {
+                grid.Columns[i].Width = 40;
+            }
 
-            for (int i = 0; i < rows; i++)
-                for (int j = 0; j < columns; j++)
-                    dataGridViewMatrix.Rows[i].Cells[j].Value = arr[i, j];
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < cols; c++)
+                {
+                    grid.Rows[r].Cells[c].Value = matrix[r, c];
+                }
+            }
         }
 
-        private void buttonDone_Click(object sender, EventArgs e)
+
+        private void buttonOpen_RAA_Click(object sender, EventArgs e)
         {
-            matrix = ds.ChangeArray(matrix);
-            FillGrid(matrix);
+            if (openFileDialogTask.ShowDialog() == DialogResult.OK)
+            {
+                openFilePath = openFileDialogTask.FileName;
+
+                inputMatrix = LoadFromFileData(openFilePath);
+                FillGrid(dataGridViewInMatrix_RAA, inputMatrix);
+
+                buttonDone_RAA.Enabled = true;
+                buttonSaveFile_RAA.Enabled = false;
+
+                dataGridViewOutMatrix_RAA.Rows.Clear();
+                dataGridViewOutMatrix_RAA.Columns.Clear();
+            }
         }
 
-        private void buttonHelp_Click(object sender, EventArgs e)
+        private void buttonDone_RAA_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Таск 3 выполнила студентка группы АААБ-23-1 Решетова Арина",
-                "Справка",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            if (string.IsNullOrWhiteSpace(openFilePath))
+            {
+                MessageBox.Show("Сначала загрузите файл.", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            resultMatrix = ds.GetMatrix(openFilePath);
+
+            FillGrid(dataGridViewOutMatrix_RAA, resultMatrix);
+
+            buttonSaveFile_RAA.Enabled = true;
+        }
+
+        private void buttonSaveFile_RAA_Click(object sender, EventArgs e)
+        {
+            if (resultMatrix == null)
+            {
+                MessageBox.Show("Нет данных для сохранения.", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            saveFileDialogMatrix.FileName = "OutPutFileTask7V23.csv";
+            saveFileDialogMatrix.InitialDirectory = Directory.GetCurrentDirectory();
+
+            if (saveFileDialogMatrix.ShowDialog() == DialogResult.OK)
+            {
+                string path = saveFileDialogMatrix.FileName;
+
+                int rows = resultMatrix.GetLength(0);
+                int cols = resultMatrix.GetLength(1);
+
+                using (StreamWriter sw = new StreamWriter(path, false))
+                {
+                    for (int r = 0; r < rows; r++)
+                    {
+                        string[] parts = new string[cols];
+                        for (int c = 0; c < cols; c++)
+                        {
+                            parts[c] = resultMatrix[r, c].ToString();
+                        }
+
+                        string line = string.Join(";", parts);
+                        sw.WriteLine(line);
+                    }
+                }
+
+                MessageBox.Show("Файл успешно сохранён.", "Сохранение",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void buttonHelp_RAA_Click(object sender, EventArgs e)
+        {
+            FormAbout_RAA about = new FormAbout_RAA();
+            about.ShowDialog();
         }
     }
 }

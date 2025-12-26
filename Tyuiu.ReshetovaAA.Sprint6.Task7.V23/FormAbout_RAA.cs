@@ -10,9 +10,9 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
             InitializeComponent();
         }
 
-        private void buttonOk_RAA_Click(object sender, EventArgs e)
+        private void buttonOK_RAA_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

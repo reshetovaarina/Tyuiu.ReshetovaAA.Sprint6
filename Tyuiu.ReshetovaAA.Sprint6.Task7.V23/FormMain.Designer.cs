@@ -8,7 +8,10 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) components.Dispose();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
@@ -16,263 +19,214 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
 
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            this.components = new System.ComponentModel.Container();
+            this.panelTop_RAA = new System.Windows.Forms.Panel();
+            this.buttonHelp_RAA = new System.Windows.Forms.Button();
+            this.buttonSaveFile_RAA = new System.Windows.Forms.Button();
+            this.buttonDone_RAA = new System.Windows.Forms.Button();
+            this.buttonOpen_RAA = new System.Windows.Forms.Button();
+            this.groupBoxCondition_RAA = new System.Windows.Forms.GroupBox();
+            this.textBoxCondition_RAA = new System.Windows.Forms.TextBox();
+            this.groupBoxIn_RAA = new System.Windows.Forms.GroupBox();
+            this.dataGridViewInMatrix_RAA = new System.Windows.Forms.DataGridView();
+            this.groupBoxOut_RAA = new System.Windows.Forms.GroupBox();
+            this.dataGridViewOutMatrix_RAA = new System.Windows.Forms.DataGridView();
+            this.openFileDialogTask = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogMatrix = new System.Windows.Forms.SaveFileDialog();
+            this.toolTipButton_RAA = new System.Windows.Forms.ToolTip(this.components);
+            this.panelTop_RAA.SuspendLayout();
+            this.groupBoxCondition_RAA.SuspendLayout();
+            this.groupBoxIn_RAA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInMatrix_RAA)).BeginInit();
+            this.groupBoxOut_RAA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutMatrix_RAA)).BeginInit();
+            this.SuspendLayout();
 
-            toolStripTop_RAA = new ToolStrip();
-            buttonOpenFile_RAA = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            buttonDone_RAA = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            buttonSaveFile_RAA = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
-            toolStripSeparatorRight = new ToolStripSeparator();
-            buttonHelp_RAA = new ToolStripButton();
+            // panelTop_RAA
 
-            labelTask_RAA = new Label();
-            textBoxTask_RAA = new TextBox();
-            labelIn_RAA = new Label();
-            labelOut_RAA = new Label();
+            this.panelTop_RAA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTop_RAA.Controls.Add(this.buttonHelp_RAA);
+            this.panelTop_RAA.Controls.Add(this.buttonSaveFile_RAA);
+            this.panelTop_RAA.Controls.Add(this.buttonDone_RAA);
+            this.panelTop_RAA.Controls.Add(this.buttonOpen_RAA);
+            this.panelTop_RAA.Location = new System.Drawing.Point(12, 12);
+            this.panelTop_RAA.Name = "panelTop_RAA";
+            this.panelTop_RAA.Size = new System.Drawing.Size(1160, 56);
+            this.panelTop_RAA.TabIndex = 0;
 
-            splitContainerMain_RAA = new SplitContainer();
-            dataGridViewInMatrix_RAA = new DataGridView();
-            dataGridViewOutMatrix_RAA = new DataGridView();
-
-            openFileDialogTask = new OpenFileDialog();
-            saveFileDialogMatrix = new SaveFileDialog();
-            toolTipButton_RAA = new ToolTip(components);
-
-            toolStripTop_RAA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainerMain_RAA).BeginInit();
-            splitContainerMain_RAA.Panel1.SuspendLayout();
-            splitContainerMain_RAA.Panel2.SuspendLayout();
-            splitContainerMain_RAA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewInMatrix_RAA).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOutMatrix_RAA).BeginInit();
-            SuspendLayout();
-
-            // 
-            // toolStripTop_RAA
-            // 
-            toolStripTop_RAA.AutoSize = false;
-            toolStripTop_RAA.GripStyle = ToolStripGripStyle.Hidden;
-            toolStripTop_RAA.ImageScalingSize = new System.Drawing.Size(48, 48);
-            toolStripTop_RAA.Items.AddRange(new ToolStripItem[] {
-                buttonOpenFile_RAA,
-                toolStripSeparator1,
-                buttonDone_RAA,
-                toolStripSeparator2,
-                buttonSaveFile_RAA,
-                toolStripSeparator3,
-                toolStripSeparatorRight,
-                buttonHelp_RAA
-            });
-            toolStripTop_RAA.Location = new System.Drawing.Point(0, 0);
-            toolStripTop_RAA.Name = "toolStripTop_RAA";
-            toolStripTop_RAA.Padding = new Padding(6, 8, 6, 8);
-            toolStripTop_RAA.Size = new System.Drawing.Size(984, 74);
-            toolStripTop_RAA.TabIndex = 0;
-
-            // 
-            // buttonOpenFile_RAA
-            // 
-            buttonOpenFile_RAA.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            buttonOpenFile_RAA.Image = Properties.Resources.open;
-            buttonOpenFile_RAA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            buttonOpenFile_RAA.Name = "buttonOpenFile_RAA";
-            buttonOpenFile_RAA.Size = new System.Drawing.Size(52, 52);
-            buttonOpenFile_RAA.ToolTipText = "Открыть файл";
-            buttonOpenFile_RAA.Click += buttonOpenFile_RAA_Click;
-
-            // 
-            // buttonDone_RAA
-            // 
-            buttonDone_RAA.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            buttonDone_RAA.Image = Properties.Resources.done;
-            buttonDone_RAA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            buttonDone_RAA.Name = "buttonDone_RAA";
-            buttonDone_RAA.Size = new System.Drawing.Size(52, 52);
-            buttonDone_RAA.ToolTipText = "Выполнить";
-            buttonDone_RAA.Click += buttonDone_RAA_Click;
-
-            // 
-            // buttonSaveFile_RAA
-            // 
-            buttonSaveFile_RAA.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            buttonSaveFile_RAA.Image = Properties.Resources.save;
-            buttonSaveFile_RAA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            buttonSaveFile_RAA.Name = "buttonSaveFile_RAA";
-            buttonSaveFile_RAA.Size = new System.Drawing.Size(52, 52);
-            buttonSaveFile_RAA.ToolTipText = "Сохранить файл";
-            buttonSaveFile_RAA.Click += buttonSaveFile_RAA_Click;
-
-            // 
-            // separators
-            // 
-            toolStripSeparator1.AutoSize = false;
-            toolStripSeparator1.Size = new System.Drawing.Size(10, 58);
-            toolStripSeparator2.AutoSize = false;
-            toolStripSeparator2.Size = new System.Drawing.Size(10, 58);
-            toolStripSeparator3.AutoSize = false;
-            toolStripSeparator3.Size = new System.Drawing.Size(10, 58);
-
-            toolStripSeparatorRight.Alignment = ToolStripItemAlignment.Right;
-            toolStripSeparatorRight.AutoSize = false;
-            toolStripSeparatorRight.Size = new System.Drawing.Size(10, 58);
-
-            // 
             // buttonHelp_RAA
-            // 
-            buttonHelp_RAA.Alignment = ToolStripItemAlignment.Right;
-            buttonHelp_RAA.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            buttonHelp_RAA.Image = Properties.Resources.help;
-            buttonHelp_RAA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            buttonHelp_RAA.Name = "buttonHelp_RAA";
-            buttonHelp_RAA.Size = new System.Drawing.Size(52, 52);
-            buttonHelp_RAA.ToolTipText = "О программе";
-            buttonHelp_RAA.Click += buttonHelp_RAA_Click;
 
-            // 
-            // labelTask_RAA
-            // 
-            labelTask_RAA.AutoSize = true;
-            labelTask_RAA.Location = new System.Drawing.Point(12, 84);
-            labelTask_RAA.Name = "labelTask_RAA";
-            labelTask_RAA.Size = new System.Drawing.Size(77, 20);
-            labelTask_RAA.TabIndex = 1;
-            labelTask_RAA.Text = "Условие:";
+            this.buttonHelp_RAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_RAA.Image = Properties.Resources.icon_info;  
+            this.buttonHelp_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHelp_RAA.Location = new System.Drawing.Point(1040, 8);
+            this.buttonHelp_RAA.Name = "buttonHelp_RAA";
+            this.buttonHelp_RAA.Size = new System.Drawing.Size(110, 40);
+            this.buttonHelp_RAA.TabIndex = 3;
+            this.buttonHelp_RAA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipButton_RAA.SetToolTip(this.buttonHelp_RAA, "Информация о программе");
+            this.buttonHelp_RAA.UseVisualStyleBackColor = true;
+            this.buttonHelp_RAA.Click += new System.EventHandler(this.buttonHelp_RAA_Click);
 
-            // 
-            // textBoxTask_RAA
-            // 
-            textBoxTask_RAA.Location = new System.Drawing.Point(12, 108);
-            textBoxTask_RAA.Multiline = true;
-            textBoxTask_RAA.ReadOnly = true;
-            textBoxTask_RAA.ScrollBars = ScrollBars.Vertical;
-            textBoxTask_RAA.Size = new System.Drawing.Size(960, 78);
-            textBoxTask_RAA.TabIndex = 2;
-            textBoxTask_RAA.Text =
-                "Дан файл InPutFileTask7V23.csv в котором хранится матрица целочисленных значений. " +
-                "Загрузить файл через openFileDialog в объект dataGridViewIn. " +
-                "Изменить в последнем столбце значения меньше 2 на 2. " +
-                "Результат вывести в объект dataGridViewOut. " +
-                "Сохранить результат в файл OutPutFileTask7V23.csv через saveFileDialog.";
+            // buttonSaveFile_RAA
 
-            // 
-            // labelIn_RAA
-            // 
-            labelIn_RAA.AutoSize = true;
-            labelIn_RAA.Location = new System.Drawing.Point(12, 198);
-            labelIn_RAA.Name = "labelIn_RAA";
-            labelIn_RAA.Size = new System.Drawing.Size(44, 20);
-            labelIn_RAA.TabIndex = 3;
-            labelIn_RAA.Text = "Ввод:";
+            this.buttonSaveFile_RAA.Image = Properties.Resources.icon_save;  
+            this.buttonSaveFile_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveFile_RAA.Location = new System.Drawing.Point(196, 8);
+            this.buttonSaveFile_RAA.Name = "buttonSaveFile_RAA";
+            this.buttonSaveFile_RAA.Size = new System.Drawing.Size(110, 40);
+            this.buttonSaveFile_RAA.TabIndex = 2;
+            this.buttonSaveFile_RAA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipButton_RAA.SetToolTip(this.buttonSaveFile_RAA, "Сохранить результат в CSV");
+            this.buttonSaveFile_RAA.UseVisualStyleBackColor = true;
+            this.buttonSaveFile_RAA.Click += new System.EventHandler(this.buttonSaveFile_RAA_Click);
 
-            // 
-            // labelOut_RAA
-            // 
-            labelOut_RAA.AutoSize = true;
-            labelOut_RAA.Location = new System.Drawing.Point(500, 198);
-            labelOut_RAA.Name = "labelOut_RAA";
-            labelOut_RAA.Size = new System.Drawing.Size(55, 20);
-            labelOut_RAA.TabIndex = 4;
-            labelOut_RAA.Text = "Вывод:";
+            // buttonDone_RAA
 
-            // 
-            // splitContainerMain_RAA
-            // 
-            splitContainerMain_RAA.Location = new System.Drawing.Point(12, 222);
-            splitContainerMain_RAA.Name = "splitContainerMain_RAA"; splitContainerMain_RAA.Size = new System.Drawing.Size(960, 367);
-            splitContainerMain_RAA.SplitterDistance = 480;
-            splitContainerMain_RAA.TabIndex = 5;
+            this.buttonDone_RAA.Image = Properties.Resources.icon_add;   
+            this.buttonDone_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDone_RAA.Location = new System.Drawing.Point(102, 8);
+            this.buttonDone_RAA.Name = "buttonDone_RAA";
+            this.buttonDone_RAA.Size = new System.Drawing.Size(88, 40);
+            this.buttonDone_RAA.TabIndex = 1;
+            this.buttonDone_RAA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipButton_RAA.SetToolTip(this.buttonDone_RAA, "Изменить последний столбец");
+            this.buttonDone_RAA.UseVisualStyleBackColor = true;
+            this.buttonDone_RAA.Click += new System.EventHandler(this.buttonDone_RAA_Click);
 
-            // серый фон как у препода
-            splitContainerMain_RAA.Panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            splitContainerMain_RAA.Panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            // buttonOpen_RAA
 
-            // 
-            // dataGridViewInMatrix_RAA 
-            // 
-            dataGridViewInMatrix_RAA.AllowUserToAddRows = false;
-            dataGridViewInMatrix_RAA.AllowUserToDeleteRows = false;
-            dataGridViewInMatrix_RAA.ReadOnly = true;
-            dataGridViewInMatrix_RAA.RowHeadersVisible = false;
-            dataGridViewInMatrix_RAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewInMatrix_RAA.Location = new System.Drawing.Point(8, 8);
-            dataGridViewInMatrix_RAA.Name = "dataGridViewInMatrix_RAA";
-            dataGridViewInMatrix_RAA.Size = new System.Drawing.Size(460, 350);
-            dataGridViewInMatrix_RAA.TabIndex = 0;
+            this.buttonOpen_RAA.Image = Properties.Resources.icon_load; 
+            this.buttonOpen_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOpen_RAA.Location = new System.Drawing.Point(8, 8);
+            this.buttonOpen_RAA.Name = "buttonOpen_RAA";
+            this.buttonOpen_RAA.Size = new System.Drawing.Size(88, 40);
+            this.buttonOpen_RAA.TabIndex = 0;
+            this.buttonOpen_RAA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipButton_RAA.SetToolTip(this.buttonOpen_RAA, "Открыть входной CSV");
+            this.buttonOpen_RAA.UseVisualStyleBackColor = true;
+            this.buttonOpen_RAA.Click += new System.EventHandler(this.buttonOpen_RAA_Click);
 
-            // 
-            // dataGridViewOutMatrix_RAA  
-            // 
-            dataGridViewOutMatrix_RAA.AllowUserToAddRows = false;
-            dataGridViewOutMatrix_RAA.AllowUserToDeleteRows = false;
-            dataGridViewOutMatrix_RAA.ReadOnly = true;
-            dataGridViewOutMatrix_RAA.RowHeadersVisible = false;
-            dataGridViewOutMatrix_RAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOutMatrix_RAA.Location = new System.Drawing.Point(8, 8);
-            dataGridViewOutMatrix_RAA.Name = "dataGridViewOutMatrix_RAA";
-            dataGridViewOutMatrix_RAA.Size = new System.Drawing.Size(460, 350);
-            dataGridViewOutMatrix_RAA.TabIndex = 0;
+            // groupBoxCondition_RAA
 
-            splitContainerMain_RAA.Panel1.Controls.Add(dataGridViewInMatrix_RAA);
-            splitContainerMain_RAA.Panel2.Controls.Add(dataGridViewOutMatrix_RAA);
+            this.groupBoxCondition_RAA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxCondition_RAA.Controls.Add(this.textBoxCondition_RAA);
+            this.groupBoxCondition_RAA.Location = new System.Drawing.Point(12, 74);
+            this.groupBoxCondition_RAA.Name = "groupBoxCondition_RAA";
+            this.groupBoxCondition_RAA.Size = new System.Drawing.Size(1160, 82);
+            this.groupBoxCondition_RAA.TabIndex = 1;
+            this.groupBoxCondition_RAA.TabStop = false;
+            this.groupBoxCondition_RAA.Text = "Условие:";
 
-            // 
+            // textBoxCondition_RAA
+
+            this.textBoxCondition_RAA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxCondition_RAA.Location = new System.Drawing.Point(3, 19);
+            this.textBoxCondition_RAA.Multiline = true;
+            this.textBoxCondition_RAA.Name = "textBoxCondition_RAA";
+            this.textBoxCondition_RAA.ReadOnly = true;
+            this.textBoxCondition_RAA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxCondition_RAA.Size = new System.Drawing.Size(1154, 60);
+            this.textBoxCondition_RAA.TabIndex = 0;
+            this.textBoxCondition_RAA.Text = "Дан файл InPutFileTask7V23.csv, в котором хранится матрица целочисленных значений. Загрузить файл через openFileDialog в объект dataGridViewIn. Изменить в последнем столбце значения меньше 2 на 2. Результат вывести в объект dataGridViewOut. Сохранить результат в файл OutPutFileTask7V23.csv через saveFileDialog.";
+
+            // groupBoxIn_RAA
+
+            this.groupBoxIn_RAA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBoxIn_RAA.Controls.Add(this.dataGridViewInMatrix_RAA);
+            this.groupBoxIn_RAA.Location = new System.Drawing.Point(12, 162);
+            this.groupBoxIn_RAA.Name = "groupBoxIn_RAA";
+            this.groupBoxIn_RAA.Size = new System.Drawing.Size(570, 387);
+            this.groupBoxIn_RAA.TabIndex = 2;
+            this.groupBoxIn_RAA.TabStop = false;
+            this.groupBoxIn_RAA.Text = "Ввод:";
+
+            // dataGridViewInMatrix_RAA
+
+            this.dataGridViewInMatrix_RAA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInMatrix_RAA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewInMatrix_RAA.Location = new System.Drawing.Point(3, 19);
+            this.dataGridViewInMatrix_RAA.Name = "dataGridViewInMatrix_RAA";
+            this.dataGridViewInMatrix_RAA.RowHeadersVisible = false;
+            this.dataGridViewInMatrix_RAA.RowTemplate.Height = 24;
+            this.dataGridViewInMatrix_RAA.Size = new System.Drawing.Size(564, 365);
+            this.dataGridViewInMatrix_RAA.TabIndex = 0;
+
+            // groupBoxOut_RAA
+
+            this.groupBoxOut_RAA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxOut_RAA.Controls.Add(this.dataGridViewOutMatrix_RAA);
+            this.groupBoxOut_RAA.Location = new System.Drawing.Point(602, 162);
+            this.groupBoxOut_RAA.Name = "groupBoxOut_RAA";
+            this.groupBoxOut_RAA.Size = new System.Drawing.Size(570, 387);
+            this.groupBoxOut_RAA.TabIndex = 3;
+            this.groupBoxOut_RAA.TabStop = false;
+            this.groupBoxOut_RAA.Text = "Вывод:";
+
+            // dataGridViewOutMatrix_RAA
+
+            this.dataGridViewOutMatrix_RAA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOutMatrix_RAA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOutMatrix_RAA.Location = new System.Drawing.Point(3, 19);
+            this.dataGridViewOutMatrix_RAA.Name = "dataGridViewOutMatrix_RAA";
+            this.dataGridViewOutMatrix_RAA.RowHeadersVisible = false;
+            this.dataGridViewOutMatrix_RAA.RowTemplate.Height = 24;
+            this.dataGridViewOutMatrix_RAA.Size = new System.Drawing.Size(564, 365);
+            this.dataGridViewOutMatrix_RAA.TabIndex = 0;
+
+            // openFileDialogTask
+
+            this.openFileDialogTask.FileName = "openFileDialogTask";
+            this.openFileDialogTask.Filter = "CSV файлы|*.csv|Все файлы|*.*";
+
+            // saveFileDialogMatrix
+
+            this.saveFileDialogMatrix.Filter = "CSV файлы|*.csv|Все файлы|*.*";
+
             // FormMain
-            // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(984, 601);
-            Controls.Add(splitContainerMain_RAA);
-            Controls.Add(labelOut_RAA);
-            Controls.Add(labelIn_RAA);
-            Controls.Add(textBoxTask_RAA);
-            Controls.Add(labelTask_RAA);
-            Controls.Add(toolStripTop_RAA);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            Name = "FormMain";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Спринт 6 | Таск 7 | Вариант 23 | Решетова А.А.";
 
-            toolStripTop_RAA.ResumeLayout(false);
-            toolStripTop_RAA.PerformLayout();
-            splitContainerMain_RAA.Panel1.ResumeLayout(false);
-            splitContainerMain_RAA.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainerMain_RAA).EndInit();
-            splitContainerMain_RAA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewInMatrix_RAA).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOutMatrix_RAA).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.groupBoxOut_RAA);
+            this.Controls.Add(this.groupBoxIn_RAA);
+            this.Controls.Add(this.groupBoxCondition_RAA);
+            this.Controls.Add(this.panelTop_RAA);
+            this.MinimumSize = new System.Drawing.Size(900, 600);
+            this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Спринт 6 | Таск 7 | Вариант 23 | Решетова А.А.";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panelTop_RAA.ResumeLayout(false);
+            this.groupBoxCondition_RAA.ResumeLayout(false);
+            this.groupBoxCondition_RAA.PerformLayout();
+            this.groupBoxIn_RAA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInMatrix_RAA)).EndInit();
+            this.groupBoxOut_RAA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutMatrix_RAA)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private ToolStrip toolStripTop_RAA;
-        private ToolStripButton buttonOpenFile_RAA;
-        private ToolStripButton buttonDone_RAA;
-        private ToolStripButton buttonSaveFile_RAA;
-        private ToolStripButton buttonHelp_RAA;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripSeparator toolStripSeparator2;
-        private ToolStripSeparator toolStripSeparator3;
-        private ToolStripSeparator toolStripSeparatorRight;
-
-        private Label labelTask_RAA; private TextBox textBoxTask_RAA;
-        private Label labelIn_RAA;
-        private Label labelOut_RAA;
-
-        private SplitContainer splitContainerMain_RAA;
-        private DataGridView dataGridViewInMatrix_RAA;
-        private DataGridView dataGridViewOutMatrix_RAA;
-
-        private OpenFileDialog openFileDialogTask;
-        private SaveFileDialog saveFileDialogMatrix;
-        private ToolTip toolTipButton_RAA;
+        private System.Windows.Forms.Panel panelTop_RAA;
+        private System.Windows.Forms.Button buttonHelp_RAA;
+        private System.Windows.Forms.Button buttonSaveFile_RAA;
+        private System.Windows.Forms.Button buttonDone_RAA;
+        private System.Windows.Forms.Button buttonOpen_RAA;
+        private System.Windows.Forms.GroupBox groupBoxCondition_RAA;
+        private System.Windows.Forms.TextBox textBoxCondition_RAA;
+        private System.Windows.Forms.GroupBox groupBoxIn_RAA;
+        private System.Windows.Forms.DataGridView dataGridViewInMatrix_RAA;
+        private System.Windows.Forms.GroupBox groupBoxOut_RAA;
+        private System.Windows.Forms.DataGridView dataGridViewOutMatrix_RAA;
+        private System.Windows.Forms.OpenFileDialog openFileDialogTask;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogMatrix;
+        private System.Windows.Forms.ToolTip toolTipButton_RAA;
     }
 }

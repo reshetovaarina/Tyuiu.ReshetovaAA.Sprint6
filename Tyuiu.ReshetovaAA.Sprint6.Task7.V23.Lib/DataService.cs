@@ -8,35 +8,36 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Lib
     {
         public int[,] GetMatrix(string path)
         {
-            // читаем файл целиком
             string fileData = File.ReadAllText(path);
 
-            // делим на строки (как у препода)
             fileData = fileData.Replace('\n', '\r');
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            string[] lines = fileData.Split(
+                new char[] { '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
 
             int rows = lines.Length;
             int cols = lines[0].Split(';').Length;
 
             int[,] matrix = new int[rows, cols];
 
-            // заполнить матрицу из csv
-            for (int r = 0; r < rows; r++)
+            for (int i = 0; i < rows; i++)
             {
-                string[] line = lines[r].Split(';');
-                for (int c = 0; c < cols; c++)
+                string[] temp = lines[i].Split(';');
+
+                for (int j = 0; j < cols; j++)
                 {
-                    matrix[r, c] = Convert.ToInt32(line[c]);
+                    matrix[i, j] = Convert.ToInt32(temp[j]);
                 }
             }
 
-            // в последнем столбце все значения < 2 заменить на 2
             int lastCol = cols - 1;
-            for (int r = 0; r < rows; r++)
+
+            for (int i = 0; i < rows; i++)
             {
-                if (matrix[r, lastCol] < 2)
+                if (matrix[i, lastCol] < 2)
                 {
-                    matrix[r, lastCol] = 2;
+                    matrix[i, lastCol] = 2;
                 }
             }
 

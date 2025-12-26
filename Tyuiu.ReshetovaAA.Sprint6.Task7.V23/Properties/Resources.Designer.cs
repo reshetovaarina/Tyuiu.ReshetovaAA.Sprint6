@@ -63,9 +63,9 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap done {
+        internal static System.Drawing.Bitmap icon_add {
             get {
-                object obj = ResourceManager.GetObject("done", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap help {
+        internal static System.Drawing.Bitmap icon_info {
             get {
-                object obj = ResourceManager.GetObject("help", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap me {
+        internal static System.Drawing.Bitmap icon_load {
             get {
-                object obj = ResourceManager.GetObject("me", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_load", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap open {
+        internal static System.Drawing.Bitmap icon_save {
             get {
-                object obj = ResourceManager.GetObject("open", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap save {
+        internal static System.Drawing.Bitmap photo_me {
             get {
-                object obj = ResourceManager.GetObject("save", resourceCulture);
+                object obj = ResourceManager.GetObject("photo_me", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
