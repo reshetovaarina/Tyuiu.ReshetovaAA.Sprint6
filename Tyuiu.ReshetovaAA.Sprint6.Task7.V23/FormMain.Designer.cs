@@ -58,7 +58,7 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
             // buttonHelp_RAA
 
             this.buttonHelp_RAA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_RAA.Image = Properties.Resources.icon_info;  
+            this.buttonHelp_RAA.Image = Properties.Resources.icon_info; 
             this.buttonHelp_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHelp_RAA.Location = new System.Drawing.Point(1040, 8);
             this.buttonHelp_RAA.Name = "buttonHelp_RAA";
@@ -71,7 +71,7 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
 
             // buttonSaveFile_RAA
 
-            this.buttonSaveFile_RAA.Image = Properties.Resources.icon_save;  
+            this.buttonSaveFile_RAA.Image = Properties.Resources.icon_save;
             this.buttonSaveFile_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSaveFile_RAA.Location = new System.Drawing.Point(196, 8);
             this.buttonSaveFile_RAA.Name = "buttonSaveFile_RAA";
@@ -84,7 +84,7 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
 
             // buttonDone_RAA
 
-            this.buttonDone_RAA.Image = Properties.Resources.icon_add;   
+            this.buttonDone_RAA.Image = Properties.Resources.icon_add; 
             this.buttonDone_RAA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDone_RAA.Location = new System.Drawing.Point(102, 8);
             this.buttonDone_RAA.Name = "buttonDone_RAA";

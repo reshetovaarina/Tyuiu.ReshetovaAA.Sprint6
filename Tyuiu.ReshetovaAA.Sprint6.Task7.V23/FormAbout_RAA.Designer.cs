@@ -42,7 +42,7 @@ namespace Tyuiu.ReshetovaAA.Sprint6.Task7.V23
             this.labelInfo_RAA.Name = "labelInfo_RAA";
             this.labelInfo_RAA.Size = new System.Drawing.Size(330, 90);
             this.labelInfo_RAA.TabIndex = 1;
-            this.labelInfo_RAA.Text = "Разработчик: Решетова Арина А.\r\nГруппа: СМАРТб-25-1\r\nТюменский индустриальный университет\r\nВысшая школа цифровых технологий\r\n\r\nСпринт 6, Task 7, Variant 23";
+            this.labelInfo_RAA.Text = "Разработчик: Решетова Арина \r\nГруппа: СМАРТб-25-1\r\nТюменский индустриальный университет\r\nВысшая школа цифровых технологий\r\n\r\nСпринт 6, Таск 7, Вариант 23";
 
             // buttonOK_RAA
 
